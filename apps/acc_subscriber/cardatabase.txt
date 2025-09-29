@@ -1,0 +1,4 @@
+car_number car_model car_name car_year
+0001 Hyundai Fritz 2019
+0002 Volkswagen Diana 2022
+0003 Skoda Joost 2025

@@ -52,7 +52,7 @@ if __name__ == "__main__":
     ecal_core.initialize(sys.argv, "eCAL Example Publisher App")
 
     # Create a publisher that sends dummy data to the "hello_topic" topic
-    pub = StringPublisher("acc_topic")
+    pub = StringPublisher("/acc_topic")
     
     # Send the dummy data every 0.5 seconds
     counter = 0

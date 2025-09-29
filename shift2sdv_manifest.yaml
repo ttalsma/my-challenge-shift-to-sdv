@@ -47,3 +47,31 @@ workloads:
     runtimeConfig: |
       image: ghcr.io/eclipse-sdv-hackathon-chapter-two/shift2sdv/web_ivi:latest
       commandOptions: [ "--net=host", "--ipc=host"]
+  ecal_example_publisher:
+    runtime: podman
+    agent: hpc1
+    restartPolicy: NEVER
+    runtimeConfig: |
+      image: ghcr.io/eclipse-sdv-hackathon-chapter-two/shift2sdv/ecal_example_publisher:latest
+      commandOptions: [ "--net=shared_net" ]
+  ecal_example_subscriber:
+    runtime: podman
+    agent: hpc1
+    restartPolicy: NEVER
+    runtimeConfig: |
+      image: ghcr.io/eclipse-sdv-hackathon-chapter-two/shift2sdv/ecal_example_subscriber:latest
+      commandOptions: [ "--net=shared_net" ]
+  acc_publisher:
+    runtime: podman
+    agent: hpc1
+    restartPolicy: NEVER
+    runtimeConfig: |
+      image: ghcr.io/eclipse-sdv-hackathon-chapter-two/shift2sdv/acc_publisher:latest
+      commandOptions: [ "--net=shared_net" ]
+  acc_subscriber:
+    runtime: podman
+    agent: hpc1
+    restartPolicy: NEVER
+    runtimeConfig: |
+      image: ghcr.io/eclipse-sdv-hackathon-chapter-two/shift2sdv/acc_subscriber:latest
+      commandOptions: [ "--net=shared_net" ]
